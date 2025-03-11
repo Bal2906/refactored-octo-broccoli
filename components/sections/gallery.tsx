@@ -131,42 +131,48 @@ export default function Gallery() {
                       </div>
                     </motion.div>
                   </DialogTrigger>
-                  <DialogContent className="max-w-3xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <h3 className="font-bold text-lg mb-2">Antes</h3>
-                        <div className="relative aspect-square bg-muted rounded-lg overflow-hidden">
-                          <Image
-                            src={item.imageBefore || "/placeholder.svg"}
-                            alt={`Antes - ${item.title}`}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-lg mb-2">Después</h3>
-                        <div className="relative aspect-square bg-muted rounded-lg overflow-hidden">
-                          <Image
-                            src={item.imageAfter || "/placeholder.svg"}
-                            alt={`Después - ${item.title}`}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-4">
-                      <h2 className="text-xl font-bold">{item.title}</h2>
-                      <p className="text-muted-foreground mt-2">{item.description}</p>
-                    </div>
-                  </DialogContent>
                 </Dialog>
               ))}
             </motion.div>
           </TabsContent>
         ))}
       </Tabs>
+
+      {/* Dialog to show details of the selected item */}
+      {selectedItem && (
+        <Dialog open onOpenChange={() => setSelectedItem(null)}>
+          <DialogContent className="max-w-3xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-bold text-lg mb-2">Antes</h3>
+                <div className="relative aspect-square bg-muted rounded-lg overflow-hidden">
+                  <Image
+                    src={selectedItem.imageBefore || "/placeholder.svg"}
+                    alt={`Antes - ${selectedItem.title}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-bold text-lg mb-2">Después</h3>
+                <div className="relative aspect-square bg-muted rounded-lg overflow-hidden">
+                  <Image
+                    src={selectedItem.imageAfter || "/placeholder.svg"}
+                    alt={`Después - ${selectedItem.title}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="mt-4">
+              <h2 className="text-xl font-bold">{selectedItem.title}</h2>
+              <p className="text-muted-foreground mt-2">{selectedItem.description}</p>
+            </div>
+          </DialogContent>
+        </Dialog>
+      )}
     </section>
   )
 }
