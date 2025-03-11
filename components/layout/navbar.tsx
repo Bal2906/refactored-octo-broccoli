@@ -98,7 +98,7 @@ export default function Navbar() {
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 z-10">
           <div className="relative h-10 w-10">
-            <Image src="/images/logo.png" alt="BRODENT'S Logo" fill className="object-contain" priority />
+            <Image src="/Images/logo.png" alt="BRODENT'S Logo" fill className="object-contain" priority />
           </div>
           <span className="font-bold text-xl text-primary hidden sm:inline">BRODENT&apos;S</span>
         </Link>
@@ -167,7 +167,7 @@ export default function Navbar() {
                 <SheetTitle className="sr-only">Menú de navegación</SheetTitle>
                 <div className="flex items-center gap-2">
                   <div className="relative h-10 w-10">
-                    <Image src="/images/logo.png" alt="BRODENT'S Logo" fill className="object-contain" />
+                    <Image src="/Images/logo.png" alt="BRODENT'S Logo" fill className="object-contain" />
                   </div>
                   <span className="font-bold text-xl text-primary">BRODENT&apos;S</span>
                 </div>
@@ -263,4 +263,3 @@ export default function Navbar() {
     </header>
   )
 }
-
