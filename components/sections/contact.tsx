@@ -232,11 +232,16 @@ export default function Contact() {
                       <CalendarComponent
                         mode="single"
                         selected={date ?? undefined}
-                        onSelect={setDate}
+                        onSelect={(selectedDate) => {
+                          if (selectedDate) {
+                            setDate(selectedDate);
+                          }
+                        }}
                         initialFocus
                         disabled={(date) => date < new Date()}
-                        required 
+                        required
                       />
+
                     </PopoverContent>
                   </Popover>
                 </div>
