@@ -10,7 +10,6 @@ import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Send, Clock, Calenda
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear())
-  const [ setShowScrollTop] = useState(false)
 
   // Actualizar el año automáticamente cuando cambie
   useEffect(() => {

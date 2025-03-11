@@ -66,7 +66,7 @@ const galleryItems = [
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("all")
-  const [selectedItem, setSelectedItem] = useState(null)
+  const [setSelectedItem] = useState(null)
 
   const filteredItems =
     activeCategory === "all" ? galleryItems : galleryItems.filter((item) => item.category === activeCategory)

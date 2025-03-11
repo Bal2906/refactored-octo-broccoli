@@ -21,15 +21,15 @@ export default function Contact() {
     message: "",
   })
 
-  const [date, setDate] = useState(null)
+  const [date, setDate] = useState<Date | null>(null)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormState((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would normally send the form data to your backend
     console.log("Form submitted:", formState, "Date:", date)
@@ -231,10 +231,11 @@ export default function Contact() {
                     <PopoverContent className="w-auto p-0" align="start">
                       <CalendarComponent
                         mode="single"
-                        selected={date}
+                        selected={date ?? undefined}
                         onSelect={setDate}
                         initialFocus
                         disabled={(date) => date < new Date()}
+                        required 
                       />
                     </PopoverContent>
                   </Popover>
@@ -255,4 +256,3 @@ export default function Contact() {
     </section>
   )
 }
-

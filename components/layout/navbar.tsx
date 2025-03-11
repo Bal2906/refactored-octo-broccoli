@@ -20,7 +20,6 @@ import {
   ChevronRight,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { useMobile } from "@/hooks/use-mobile"
 
 const navLinks = [
   { name: "Inicio", href: "#hero", icon: <Home className="h-5 w-5" /> },

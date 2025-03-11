@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Star, Quote, Heart, Award } from "lucide-react"
+import { ChevronLeft, ChevronRight, Star, Heart, Award } from "lucide-react"
+import Image from "next/image"
 
 const testimonials = [
   {
@@ -191,37 +192,42 @@ export default function Testimonials() {
                 >
                   <Card className="border border-primary/10 dark:border-primary/20 bg-background/80 dark:bg-background/30 backdrop-blur-sm shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] dark:shadow-[0_10px_40px_-15px_rgba(0,0,0,0.3)] rounded-xl overflow-hidden mx-auto transform transition-all hover:shadow-[0_15px_50px_-12px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_15px_50px_-12px_rgba(0,0,0,0.25)]">
                     <CardContent className="p-6 sm:p-8 relative">
-                      {/* Icono de comillas decorativo */}
+                      {/* Icono decorativo */}
                       <motion.div
-  className="absolute -top-1 -right-1 sm:-top-3 sm:-right-3 opacity-70"
-  initial={{ opacity: 0, rotate: 0 }}
-  animate={{ opacity: 0.7, rotate: 12 }}
-  transition={{ duration: 0.5, delay: 0.2 }}
->
-  <div className="relative">
-    <img
-      src="/Images/logo.png" // Ruta de tu imagen
-      alt="Logo de BRODENT'S"
-      className="h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24"
-    />
-    {/* Efecto de brillo para modo oscuro */}
-    <div className="absolute inset-0 hidden dark:block">
-      <img
-        src="/Images/logo.png" // Ruta de tu imagen
-        alt="Logo de BRODENT'S"
-        className="h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24"
-      />
-      <div className="absolute inset-0 blur-sm">
-        <img
-          src="/Images/logo.png" // Ruta de tu imagen
-          alt="Logo de BRODENT'S"
-          className="h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24"
-        />
-      </div>
-    </div>
-  </div>
-</motion.div>
-
+                        className="absolute -top-1 -right-1 sm:-top-3 sm:-right-3 opacity-70"
+                        initial={{ opacity: 0, rotate: 0 }}
+                        animate={{ opacity: 0.7, rotate: 12 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                      >
+                        <div className="relative">
+                          <Image
+                            src="/Images/logo.png" // Ruta de tu imagen
+                            alt="Logo de BRODENT'S"
+                            width={200}
+                            height={100}
+                            className="h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24"
+                          />
+                          {/* Efecto de brillo para modo oscuro */}
+                          <div className="absolute inset-0 hidden dark:block">
+                            <Image
+                              src="/Images/logo.png" // Ruta de tu imagen
+                              alt="Logo de BRODENT'S"
+                              width={200}
+                            height={100}
+                              className="h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24"
+                            />
+                            <div className="absolute inset-0 blur-sm">
+                              <Image
+                                src="/Images/logo.png" // Ruta de tu imagen
+                                alt="Logo de BRODENT'S"
+                                width={200}
+                            height={100}
+                                className="h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
 
                       <div className="mb-5 flex items-center">
                         <div className="flex mr-4">
@@ -237,11 +243,10 @@ export default function Testimonials() {
                               }}
                             >
                               <Star
-                                className={`h-5 w-5 ${
-                                  i < testimonials[currentIndex].rating
-                                    ? "text-primary fill-primary"
-                                    : "text-muted-foreground"
-                                }`}
+                                className={`h-5 w-5 ${i < testimonials[currentIndex].rating
+                                  ? "text-primary fill-primary"
+                                  : "text-muted-foreground"
+                                  }`}
                               />
                             </motion.div>
                           ))}
@@ -262,8 +267,9 @@ export default function Testimonials() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                       >
-                        "{testimonials[currentIndex].content}"
+                        &quot;{testimonials[currentIndex].content}&quot;
                       </motion.p>
+
 
                       <motion.div
                         className="flex items-center gap-4 relative"
@@ -324,11 +330,10 @@ export default function Testimonials() {
               {testimonials.map((_, i) => (
                 <motion.button
                   key={i}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    i === currentIndex
-                      ? "w-10 bg-gradient-to-r from-primary to-primary/70 dark:from-primary dark:to-primary/80"
-                      : "w-2.5 bg-primary/30 dark:bg-primary/40 hover:bg-primary/50 dark:hover:bg-primary/60"
-                  }`}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${i === currentIndex
+                    ? "w-10 bg-gradient-to-r from-primary to-primary/70 dark:from-primary dark:to-primary/80"
+                    : "w-2.5 bg-primary/30 dark:bg-primary/40 hover:bg-primary/50 dark:hover:bg-primary/60"
+                    }`}
                   onClick={() => goToTestimonial(i)}
                   aria-label={`Ver testimonio ${i + 1}`}
                   whileHover={{ scale: 1.2 }}
