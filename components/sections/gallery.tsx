@@ -66,7 +66,7 @@ const galleryItems = [
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("all")
-  const [setSelectedItem] = useState(null)
+  const [selectedItem, setSelectedItem] = useState<null | typeof galleryItems[0]>(null)
 
   const filteredItems =
     activeCategory === "all" ? galleryItems : galleryItems.filter((item) => item.category === activeCategory)
@@ -170,4 +170,3 @@ export default function Gallery() {
     </section>
   )
 }
-
