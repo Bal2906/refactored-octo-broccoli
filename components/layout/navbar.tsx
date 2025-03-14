@@ -25,6 +25,7 @@ const navLinks = [
   { name: "Inicio", href: "#hero", icon: <Home className="h-5 w-5" /> },
   { name: "Nosotros", href: "#about", icon: <Users className="h-5 w-5" /> },
   { name: "Servicios", href: "#services", icon: <Stethoscope className="h-5 w-5" /> },
+  { name: "Equipo", href: "#equipo", icon: <Stethoscope className="h-5 w-5" /> },
   { name: "Testimonios", href: "#testimonials", icon: <MessageSquareQuote className="h-5 w-5" /> },
   { name: "Galería", href: "#gallery", icon: <ImageIcon className="h-5 w-5" /> },
   { name: "Contacto", href: "#contact", icon: <PhoneCall className="h-5 w-5" /> },
@@ -263,3 +264,4 @@ export default function Navbar() {
     </header>
   )
 }
+

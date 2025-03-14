@@ -1,0 +1,110 @@
+import type { TeamMember } from "@/types/team"
+
+export const teamMembers: TeamMember[] = [
+  {
+    id: 1,
+    name: "Dr. Roberto Méndez",
+    role: "Director Médico - Ortodoncista",
+    specialty: "Ortodoncia",
+    image: "/placeholder.svg",
+    profileImage: "/placeholder.svg",
+    bio: "El Dr. Méndez cuenta con más de 15 años de experiencia en ortodoncia. Graduado con honores de la Universidad Nacional, ha dedicado su carrera a perfeccionar técnicas de alineamiento dental mínimamente invasivas.",
+    education: ["Universidad Nacional - Odontología", "Especialización en Ortodoncia - Universidad Europea"],
+    awards: ["Premio Nacional de Odontología 2018", "Reconocimiento por Innovación en Ortodoncia 2020"],
+    contact: {
+      email: "dr.mendez@brodents.com",
+      phone: "+123 456 7890",
+    },
+  },
+  {
+    id: 2,
+    name: "Dra. Carla Jiménez",
+    role: "Especialista en Endodoncia",
+    specialty: "Endodoncia",
+    image: "/placeholder.svg",
+    profileImage: "/placeholder.svg",
+    bio: "La Dra. Jiménez es reconocida por su precisión y delicadeza en tratamientos de conducto. Su enfoque centrado en el paciente y el uso de tecnología avanzada garantizan procedimientos prácticamente indoloros.",
+    education: ["Universidad Central - Odontología", "Maestría en Endodoncia - Universidad Internacional"],
+    awards: ["Investigadora del Año 2019 - Asociación Dental", "Publicación destacada en Journal of Endodontics"],
+    contact: {
+      email: "dra.jimenez@brodents.com",
+      phone: "+123 456 7891",
+    },
+  },
+  {
+    id: 3,
+    name: "Dr. Miguel Torres",
+    role: "Especialista en Implantología",
+    specialty: "Implantología",
+    image: "/placeholder.svg",
+    profileImage: "/placeholder.svg",
+    bio: "El Dr. Torres ha realizado más de 1,000 implantes dentales con una tasa de éxito del 99%. Su formación internacional y constante actualización lo posicionan como referente en rehabilitación oral con implantes.",
+    education: ["Universidad Metropolitana - Odontología", "Especialización en Implantología - Universidad de Boston"],
+    awards: [
+      "Premio a la Excelencia Clínica 2021",
+      "Miembro honorario de la Asociación Internacional de Implantología",
+    ],
+    contact: {
+      email: "dr.torres@brodents.com",
+      phone: "+123 456 7892",
+    },
+  },
+  {
+    id: 4,
+    name: "Dra. Sofía Vega",
+    role: "Odontopediatra",
+    specialty: "Odontopediatría",
+    image: "/placeholder.svg",
+    profileImage: "/placeholder.svg",
+    bio: "La Dra. Vega tiene un don especial para tratar a los pacientes más pequeños. Su enfoque lúdico y amable ha transformado la experiencia dental de cientos de niños, eliminando miedos y creando hábitos saludables desde temprana edad.",
+    education: ["Universidad Estatal - Odontología", "Especialización en Odontopediatría - Universidad Infantil"],
+    awards: ["Premio al Mejor Enfoque Pediátrico 2022", "Reconocimiento por Programa de Prevención Escolar"],
+    contact: {
+      email: "dra.vega@brodents.com",
+      phone: "+123 456 7893",
+    },
+  },
+  {
+    id: 5,
+    name: "Dr. Andrés Mora",
+    role: "Especialista en Estética Dental",
+    specialty: "Estética Dental",
+    image: "/placeholder.svg",
+    profileImage: "/placeholder.svg",
+    bio: "El Dr. Mora combina ciencia y arte para crear sonrisas perfectas. Su especialización en carillas, blanqueamientos y restauraciones estéticas lo ha convertido en el profesional preferido de quienes buscan transformar su sonrisa.",
+    education: ["Universidad del Este - Odontología", "Maestría en Odontología Estética - Universidad de California"],
+    awards: ["Premio Smile Design 2020", "Reconocimiento por Innovación en Técnicas de Blanqueamiento"],
+    contact: {
+      email: "dr.mora@brodents.com",
+      phone: "+123 456 7894",
+    },
+  },
+  {
+    id: 6,
+    name: "Dra. Laura Paz",
+    role: "Periodoncista",
+    specialty: "Periodoncia",
+    image: "/placeholder.svg",
+    profileImage: "/placeholder.svg",
+    bio: "La Dra. Paz es experta en el tratamiento de encías y tejidos de soporte dental. Su enfoque preventivo y terapéutico ha ayudado a cientos de pacientes a mantener una salud periodontal óptima y prevenir la pérdida dental.",
+    education: ["Universidad del Sur - Odontología", "Especialización en Periodoncia - Universidad Europea"],
+    awards: [
+      "Investigación destacada en tratamientos periodontales mínimamente invasivos",
+      "Reconocimiento por programa de prevención comunitaria",
+    ],
+    contact: {
+      email: "dra.paz@brodents.com",
+      phone: "+123 456 7895",
+    },
+  },
+]
+
+export const specialties: string[] = [
+  "Todos",
+  "Ortodoncia",
+  "Endodoncia",
+  "Implantología",
+  "Odontopediatría",
+  "Estética Dental",
+  "Periodoncia",
+]
